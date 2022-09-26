@@ -56,12 +56,14 @@ p {
     }
 
 .card-body {
-    margin: auto;
     background-color: hsl(0, 0%, 100%);
     text-align: start;
     flex: 0 1 50%;
     width: 50%;
-    padding: 15px;
+    height: 450px;
+    padding: 3px 30px 3px 30px;
+    display: flex;
+    flex-direction: column;
     
 }    
 
@@ -76,12 +78,20 @@ p {
 }
 
 .price {
-    color: hsl(228, 12%, 48%);
+    color: rgb(124,162,148);
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    width: 40%;
+    display: inline;
+
 }
 
 .full-price {
     text-decoration: line-through;
     opacity: 80%;
+    display: inline;
+    width: 40%;
 }
 
 .item-name h2 {
@@ -91,17 +101,27 @@ p {
 /*4. Functions */
 
 .button {
-    background-color: hsl(228, 12%, 48%);
-    border-radius: 10%;
-    justify-content: center;
-    justify-self: center;
-    width: 55%;
-    padding: 10px 15px 10px 15px;
-    }
+    background-color: rgb(124,162,148);
+    border-radius: 10px;
+    width: 100%;
+    padding: 3px 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    vertical-align: middle; 
+    line-height: 40px;
+}
 
 .button:active {
-    background-color:hsl(212, 21%, 14%) ;
+    background-color:rgb(29,62,51);
 }
 
 
 /*5. Misc */
+
