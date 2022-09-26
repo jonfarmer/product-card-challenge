@@ -36,7 +36,6 @@ p {
 
 
 /*3. Sections */
-
 #container {
     margin: 0 auto;
     max-width: 700px;
@@ -46,8 +45,8 @@ p {
 .product-card {
     display: flex;
     flex-flow: row;
-    max-width: 575px;
-    max-height: 400px;
+    width: 575px;
+    height: 400px;
     border-radius: 15px;
     align-items: center;
     justify-self: center;
@@ -75,10 +74,12 @@ p {
 .card-body h5 {
     letter-spacing: 0.3rem;
     margin-bottom: 0px;
+    font-size: 10px;
 }
 
 .card-body p {
-    margin-top: 0px;
+    margin-top: 10px;
+    line-height: 1.5rem;
     
 }
 
@@ -88,7 +89,8 @@ p {
    width: 50%;
    height: 400px;
    object-fit: cover;
-     
+   background-image: url(../product-preview-card-component-main/images/image-product-desktop.jpg);
+   background-size: cover;  
 }
 
 .prices {
@@ -100,7 +102,7 @@ p {
 
 .sale-price {
     color: hsl(158,40%,40%);
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-family: 'Fraunces', serif;
     font-weight: 500;
     width: 50%;
@@ -116,7 +118,7 @@ p {
     opacity: 60%;
     width: 50%;
     box-sizing: border-box;
-    padding-left: 40px;
+    padding-left: 35px;
     
 }
 
@@ -126,6 +128,25 @@ p {
     width: 80%;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+@media screen and (max-width: 800px) {
+    .product-card {
+        flex-direction: column;
+        width: 350px;
+        height: 600px;
+        
+    }
+
+    .card-image {
+        background-image: url(../product-preview-card-component-main/images/image-product-mobile.jpg);
+        background-size: cover;
+        width: 100%;
+    }
+
+    .card-body {
+        width: auto;
+    }
 }
 
 /*4. Functions */
