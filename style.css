@@ -135,7 +135,7 @@ p {
 
 button {
     all: unset;
-    line-height: 3.5;
+    line-height: 4;
     background-color: hsl(158,40%,40%);
     border-radius: 10px;
     font-size: 12px;
