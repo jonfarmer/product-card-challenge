@@ -1,20 +1,20 @@
 /*1. Global */
-/*2. Selectors */
-/*3. Sections */
-/*4. Functions */
-/*5. Misc */
+/*2. Elements */
+/*3. Classes */
+/*4. Functional */
+/*5. Responsive */
+
 
 
 /*1. Global */
-* {
-    box-sizing: border-box;
-}
+
 
 body {
     background-color:hsl(30, 38%, 92%) ;
+    box-sizing: border-box;
 }
 
-/*2. Selectors */
+/*2. Elements */
 h2 {
     font-family: 'Fraunces', serif;
     color: hsl(212, 21%, 14%);
@@ -33,13 +33,12 @@ p {
 }
 
 
-
-
-/*3. Sections */
-#container {
-    margin: 0 auto;
-    max-width: 700px;
-    margin-top: 25vh;
+/*3. Classes */
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .product-card {
@@ -83,14 +82,14 @@ p {
     
 }
 
-
-.card-image {
-   flex: 0 1 50%;
+.image-full {
+   display: flex;
    width: 50%;
-   height: 400px;
-   object-fit: cover;
-   background-image: url(../product-preview-card-component-main/images/image-product-desktop.jpg);
-   background-size: cover;  
+   height: 100%;
+}
+
+.image-mobile {
+    display: none;
 }
 
 .prices {
@@ -122,7 +121,6 @@ p {
     
 }
 
-
 .item-name {
     font-size: 700;
     width: 80%;
@@ -130,26 +128,7 @@ p {
     margin-bottom: 0px;
 }
 
-@media screen and (max-width: 800px) {
-    .product-card {
-        flex-direction: column;
-        width: 350px;
-        height: 600px;
-        
-    }
-
-    .card-image {
-        background-image: url(../product-preview-card-component-main/images/image-product-mobile.jpg);
-        background-size: cover;
-        width: 100%;
-    }
-
-    .card-body {
-        width: auto;
-    }
-}
-
-/*4. Functions */
+/*4. Functional */
 
 .button {
     background-color: hsl(158,40%,40%);
@@ -176,7 +155,7 @@ p {
 }
 
 .button span.icon {
-    background-image: url(../product-preview-card-component-main/images/icon-cart.svg);
+    background-image: url(images/icon-cart.svg);
     background-repeat: no-repeat;
     width: 15px;
     height: 15px;
@@ -186,5 +165,26 @@ p {
 }
 
 
-/*5. Misc */
+/*5. Responsive */
 
+@media (max-width: 640px) and (min-width: 320px) {
+    .product-card {
+        flex-direction: column;
+        width: 350px;
+        height: 600px;
+    }
+
+    .card-body {
+        width: auto;
+    }
+
+    .image-full {
+        display: none;
+    }
+
+    .image-mobile {
+        display: flex;
+        height: 40%;
+        width: 100%;
+    }
+}
